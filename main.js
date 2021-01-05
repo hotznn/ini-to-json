@@ -1,3 +1,4 @@
+const fs = require("fs");
 module.exports = {
   parse: function(text){
     var lines = text.replace(/\r/g, "").split("\n");
@@ -17,5 +18,14 @@ module.exports = {
       }
     }
     return ret;
+  },
+  load: async function(fn){
+    var me = this;
+    return new Promise(function (resolve, reject) {
+      fs.readFile(fn, function(error, data){
+        resolve(me.parse((data||"").toString()));
+      });
+    });
   }
 };
+
