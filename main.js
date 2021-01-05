@@ -11,8 +11,8 @@ module.exports = {
         o = {};
         ret[name]=o;
       }
-      else if(line.match(/^[^;]([^=]+)=(.*)$/)){
-        var mc = line.match(/^[^;]([^=]+)=([^;]*)$/);
+      else if(line.match(/^([^;][^=]*)=(.*)$/)){
+        var mc = line.match(/^([^;][^=]*)=([^;]*)$/);
         o[mc[1]]=mc[2];
       }
     }
