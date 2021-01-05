@@ -1,0 +1,16 @@
+{
+  "name": "ini-to-json",
+  "version": "1.0.0",
+  "description": "A function to parse ini-formats to json-formats.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ini",
+    "json",
+    "parser"
+  ],
+  "author": "woo",
+  "license": "MIT"
+}
